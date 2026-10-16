@@ -3,10 +3,10 @@
 A responsive medical clinic website built with React, Node.js, Express, and PostgreSQL.
 
 ## Screenshots
-![](screenshots/1.png)
-![](screenshots/2.png)
-![](screenshots/3.png)
-![](screenshots/4.png)
+![Phone](screenshots/1.png)
+![Tablet](screenshots/2.png)
+![Laptop](screenshots/3.png)
+![Modal window](screenshots/4.png)
 
 ## Features
 
