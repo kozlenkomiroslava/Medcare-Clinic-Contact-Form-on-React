@@ -22,42 +22,12 @@ function AppointmentForm() {
 
     const [showModal, setShowModal] = useState(false);
 
-    const handleSubmit = async (e) => {
+    
+    const handleSubmit = (e) => {
         e.preventDefault();
-
         setError("");
-
-        const appointment = {
-        name,
-        phone,
-        doctor,
-        date,
-        message,
-        consent
-    };
-
-    try {
-        const response = await fetch("http://localhost:5000/api/appointments", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            }, 
-            body: JSON.stringify(appointment)
-        });
-
-        const data = await response.json();
-
-        if(!response.ok) {
-            setError(data.message);
-            return;
-        }
-
         setShowModal(true);
-
-    } catch (error) {
-        setError("Something went wrong");
-    }
-};
+    };
 
     return (
         <> 
@@ -150,8 +120,6 @@ function AppointmentForm() {
             )}
         </>
     );
-
 }
-
 
 export default AppointmentForm
