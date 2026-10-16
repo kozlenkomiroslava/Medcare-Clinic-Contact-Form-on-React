@@ -1,0 +1,289 @@
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #f5f7f8;
+}
+
+/* MAIN CARD */
+
+.contact-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 620px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* IMAGE */
+
+.contact-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  color: white;
+  z-index: 2;
+}
+
+.image-overlay h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.image-overlay p {
+  font-size: 15px;
+}
+
+.contact-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+   to bottom,
+   rgba(0, 0, 0, 0.55),
+   transparent 30%,
+   transparent 70%,
+   rgba(0, 0, 0, 0.55)
+  );
+}
+
+
+/* FORM SIDE */
+
+.contact-form-wrapper {
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* FORM */
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* FIELD */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid #d5d9dc;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  background-color: #fff;
+  color: black;
+
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #222;
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+  height: 75px;
+  resize: none;
+}
+
+
+/* CHECKBOX */
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.checkbox-group label {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #555;
+}
+
+
+/* BUTTON */
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #222;
+  color: white;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #444;
+}
+
+
+/*TABLET*/
+
+@media (max-width: 1024px) {
+.contact-container {
+    max-width: 900px;
+    height: 600px;
+  }
+
+  .contact-form-wrapper {
+    padding: 25px 30px;
+  }
+
+  .contact-heading {
+    margin-bottom: 18px;
+  }
+
+  .contact-heading h2 {
+    font-size: 26px;
+  }
+
+  .appointment-form {
+    gap: 11px;
+  }
+
+  .form-group {
+    gap: 4px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  .form-group textarea {
+    height: 65px;
+  }
+
+  .submit-button {
+    padding: 11px;
+  }
+
+  .image-overlay {
+    left: 170px;
+    top: 120px;
+     left: clamp(150px, 10%, 170px);
+  }
+
+  .image-overlay h1 {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  .image-overlay p {
+    font-size: 14px;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    min-height: 100vh;
+    padding: 25px 15px;
+  }
+
+  .contact-container {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 250px;
+  }
+
+  .image-overlay {
+    left: 140px;
+    top: 20px;
+  }
+
+  .image-overlay h1 {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .image-overlay p {
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+}
