@@ -2,6 +2,12 @@
 
 A responsive medical clinic website built with React, Node.js, Express, and PostgreSQL.
 
+## Screenshots
+![](screenshots/1.png)
+![](screenshots/2.png)
+![](screenshots/3.png)
+![](screenshots/4.png)
+
 ## Features
 
 * Appointment booking form
